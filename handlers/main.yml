@@ -1,6 +1,6 @@
 ---
 - name: restart php-fpm
-  service: name={{php_fpm_binary_name}} state=restarted
+  shell: "service {{php_fpm_binary_name}} restart"
 
 - name: reload php-fpm
   service: name={{php_fpm_binary_name}} state=reloaded
